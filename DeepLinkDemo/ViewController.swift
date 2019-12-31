@@ -9,6 +9,17 @@
 import UIKit
 import WebKit
 
+class Values : NSObject {
+    static let domain           =   "https://test.paydollar.com/b2cDemo"
+    static let secureHash       =   ""
+    static let amount           =   "0.1"
+    static let currCode         =   "344"
+    static let payType          =   "N"
+    static let orderRef         =   "123456"
+    static let merchantId       =   "123456"
+    static let extra            =   ""
+    
+}
 
 class ViewController: UIViewController {
     
@@ -24,7 +35,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func call(_ sender: Any?) {
-        let str = PayGate_uat.PAYDOLLAR.rawValue + "b2cDemo/eng/payment/payForm.jsp?" + "secureHash=" + Values.secureHash + "&amount=" + Values.amount + "&currCode=" + Values.currCode + "&payType=N&orderRef=" + Values.orderRef + "&merchantId=" + Values.merchantId + "&deeplink=3"
+        let str = Values.domain + "/eng/payment/payForm.jsp?" + "secureHash=" + Values.secureHash + "&amount=" + Values.amount + "&currCode=" + Values.currCode + "&payType=N&orderRef=" + Values.orderRef + "&merchantId=" + Values.merchantId + Values.extra
+        
         wkWeb.load(URLRequest(url: URL(string:str)!))
         //UIApplication.shared.open(URL(string:str)!, options: [:], completionHandler: nil)
         //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.daledietrich.com"]];
@@ -32,24 +44,6 @@ class ViewController: UIViewController {
         //        UIApplication.shared.open(URL.init(string: "weixin://")!, options: [:], completionHandler: nil)
         //        UIApplication.shared.open(URL(string: "com.whatswhatsapp://")!, options: [:], completionHandler: nil)
     }
-    
-}
-
-enum PayGate_uat : String {
-    case PAYDOLLAR = "https://test.paydollar.com/"
-    case PESOPAY = "https://test.pesopay.com/"
-    case SIAMPAY = "https://test.siampay.com/"
-}
-
-
-class Values : NSObject {
-    
-    static let secureHash       =   ""
-    static let amount           =   "1"
-    static let currCode         =   "344"
-    static let payType          =   "N"
-    static let orderRef         =   "1577689619976"
-    static let merchantId       =   "88107394"
     
 }
 

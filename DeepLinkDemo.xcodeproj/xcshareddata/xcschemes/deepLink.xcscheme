@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "807979C623B9D87500FC9599"
-               BuildableName = "deepLink.app"
-               BlueprintName = "deepLink"
-               ReferencedContainer = "container:deepLink.xcodeproj">
+               BuildableName = "Deep Link Demo.app"
+               BlueprintName = "DeepLinkDemo"
+               ReferencedContainer = "container:DeepLinkDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "807979C623B9D87500FC9599"
-            BuildableName = "deepLink.app"
-            BlueprintName = "deepLink"
-            ReferencedContainer = "container:deepLink.xcodeproj">
+            BuildableName = "Deep Link Demo.app"
+            BlueprintName = "DeepLinkDemo"
+            ReferencedContainer = "container:DeepLinkDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -69,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "807979C623B9D87500FC9599"
-            BuildableName = "deepLink.app"
-            BlueprintName = "deepLink"
-            ReferencedContainer = "container:deepLink.xcodeproj">
+            BuildableName = "Deep Link Demo.app"
+            BlueprintName = "DeepLinkDemo"
+            ReferencedContainer = "container:DeepLinkDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

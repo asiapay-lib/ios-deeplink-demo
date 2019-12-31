@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		807979C723B9D87500FC9599 /* deepLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deepLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		807979C723B9D87500FC9599 /* DeepLinkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepLinkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807979CA23B9D87500FC9599 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		807979CC23B9D87500FC9599 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		807979CE23B9D87500FC9599 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		807979BE23B9D87500FC9599 = {
 			isa = PBXGroup;
 			children = (
-				807979C923B9D87500FC9599 /* deepLink */,
+				807979C923B9D87500FC9599 /* DeepLinkDemo */,
 				807979C823B9D87500FC9599 /* Products */,
 				807979DE23BA018900FC9599 /* Frameworks */,
 			);
@@ -52,12 +52,12 @@
 		807979C823B9D87500FC9599 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				807979C723B9D87500FC9599 /* deepLink.app */,
+				807979C723B9D87500FC9599 /* DeepLinkDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		807979C923B9D87500FC9599 /* deepLink */ = {
+		807979C923B9D87500FC9599 /* DeepLinkDemo */ = {
 			isa = PBXGroup;
 			children = (
 				807979CA23B9D87500FC9599 /* AppDelegate.swift */,
@@ -68,7 +68,7 @@
 				807979D523B9D87A00FC9599 /* LaunchScreen.storyboard */,
 				807979D823B9D87A00FC9599 /* Info.plist */,
 			);
-			path = deepLink;
+			path = DeepLinkDemo;
 			sourceTree = "<group>";
 		};
 		807979DE23BA018900FC9599 /* Frameworks */ = {
@@ -82,9 +82,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		807979C623B9D87500FC9599 /* deepLink */ = {
+		807979C623B9D87500FC9599 /* DeepLinkDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 807979DB23B9D87A00FC9599 /* Build configuration list for PBXNativeTarget "deepLink" */;
+			buildConfigurationList = 807979DB23B9D87A00FC9599 /* Build configuration list for PBXNativeTarget "DeepLinkDemo" */;
 			buildPhases = (
 				807979C323B9D87500FC9599 /* Sources */,
 				807979C423B9D87500FC9599 /* Frameworks */,
@@ -94,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = deepLink;
+			name = DeepLinkDemo;
 			productName = deepLink;
-			productReference = 807979C723B9D87500FC9599 /* deepLink.app */;
+			productReference = 807979C723B9D87500FC9599 /* DeepLinkDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +114,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 807979C223B9D87500FC9599 /* Build configuration list for PBXProject "deepLink" */;
+			buildConfigurationList = 807979C223B9D87500FC9599 /* Build configuration list for PBXProject "DeepLinkDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -127,7 +127,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				807979C623B9D87500FC9599 /* deepLink */,
+				807979C623B9D87500FC9599 /* DeepLinkDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -298,13 +298,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZDNLBDFMG6;
-				INFOPLIST_FILE = deepLink/Info.plist;
+				INFOPLIST_FILE = DeepLinkDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.asiapay.SDKApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asiapay.deeplinkdemo;
+				PRODUCT_NAME = DeepLinkDemo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,13 +316,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZDNLBDFMG6;
-				INFOPLIST_FILE = deepLink/Info.plist;
+				INFOPLIST_FILE = DeepLinkDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.asiapay.SDKApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.asiapay.deeplinkdemo;
+				PRODUCT_NAME = DeepLinkDemo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -331,7 +331,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		807979C223B9D87500FC9599 /* Build configuration list for PBXProject "deepLink" */ = {
+		807979C223B9D87500FC9599 /* Build configuration list for PBXProject "DeepLinkDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				807979D923B9D87A00FC9599 /* Debug */,
@@ -340,7 +340,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		807979DB23B9D87A00FC9599 /* Build configuration list for PBXNativeTarget "deepLink" */ = {
+		807979DB23B9D87A00FC9599 /* Build configuration list for PBXNativeTarget "DeepLinkDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				807979DC23B9D87A00FC9599 /* Debug */,
