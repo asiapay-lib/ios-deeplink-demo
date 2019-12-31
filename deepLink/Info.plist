@@ -50,6 +50,9 @@
 		<string>weixin</string>
 		<string>weixinULAPI</string>
 		<string>octopus</string>
+		<string>alipay</string>
+		<string>alipayshare</string>
+		<string>alipayhk</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
