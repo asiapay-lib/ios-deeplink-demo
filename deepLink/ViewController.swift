@@ -63,118 +63,117 @@ extension ViewController : WKNavigationDelegate {
     
     @available(iOS 13.0, *)
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, preferences: WKWebpagePreferences, decisionHandler: @escaping (WKNavigationActionPolicy, WKWebpagePreferences) -> Void) {
-        do {
-            print(navigationAction.request.url!)
-            //if navigationAction.navigationType == .linkActivated  {
-            if let url = navigationAction.request.url,
-                "https" != navigationAction.request.url?.scheme,
-                UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url, options: [:]) { (res) in
-                    print(res)
-                }
-                decisionHandler(.cancel,WKWebpagePreferences.init())
-            } else {
-                decisionHandler(.allow,WKWebpagePreferences.init())
+        print(navigationAction.request.url!)
+        //if navigationAction.navigationType == .linkActivated  {
+        if let url = navigationAction.request.url,
+            "https" != navigationAction.request.url?.scheme,
+            UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:]) { (res) in
+                print(res)
             }
-            //decisionHandler(.allow, WKWebpagePreferences.init())
+            decisionHandler(.cancel,WKWebpagePreferences.init())
+        } else {
+            decisionHandler(.allow,WKWebpagePreferences.init())
         }
-        
-        
-        func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
-            decisionHandler(.allow)
-        }
-        
-        
-        func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-            
-        }
-        
-        
-        func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
-            
-        }
-        
-        
-        func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-            
-        }
-        
-        
-        func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-            
-        }
-        
-        
-        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            
-        }
-        
-        
-        func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-            
-        }
-        
-        
-        func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-            let credential = URLCredential(user: "user", password: "password", persistence: URLCredential.Persistence.forSession)
-            completionHandler(.performDefaultHandling, credential)
-        }
-        
-        
-        func webViewWebContentProcessDidTerminate(_ webView: WKWebView) { }
+        //decisionHandler(.allow, WKWebpagePreferences.init())
     }
     
     
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        decisionHandler(.allow)
+    }
     
-    extension ViewController : WKUIDelegate {
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         
+    }
+    
+    
+    func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
         
-        func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-            return webView
-            
-        }
+    }
+    
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         
+    }
+    
+    
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         
-        func webViewDidClose(_ webView: WKWebView) { }
+    }
+    
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         
+    }
+    
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         
-        func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) { }
+    }
+    
+    
+    func webView(_ webView: WKWebView, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        let credential = URLCredential(user: "user", password: "password", persistence: URLCredential.Persistence.forSession)
+        completionHandler(.performDefaultHandling, credential)
+    }
+    
+    
+    func webViewWebContentProcessDidTerminate(_ webView: WKWebView) { }
+}
+
+
+
+extension ViewController : WKUIDelegate {
+    
+    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        return webView
         
-        
-        func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) { }
-        
-        
-        func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) { }
-        
-        
-        @available(iOS 13.0, *)
-        private func webView(_ webView: WKWebView, shouldPreviewElement elementInfo: WKContextMenuElementInfo) -> Bool {
-            return true
-        }
-        
-        
-        @available(iOS 13.0, *)
-        private func webView(_ webView: WKWebView, previewingViewControllerForElement elementInfo: WKContextMenuElementInfo, defaultActions previewActions: [WKPreviewActionItem]) -> UIViewController? {
-            return self
-        }
-        
-        
-        func webView(_ webView: WKWebView, commitPreviewingViewController previewingViewController: UIViewController) { }
-        
-        
-        @available(iOS 13.0, *)
-        func webView(_ webView: WKWebView, contextMenuConfigurationForElement elementInfo: WKContextMenuElementInfo, completionHandler: @escaping (UIContextMenuConfiguration?) -> Void) {
-            completionHandler(.none)
-        }
-        
-        
-        @available(iOS 13.0, *)
-        func webView(_ webView: WKWebView, contextMenuWillPresentForElement elementInfo: WKContextMenuElementInfo) { }
-        
-        
-        @available(iOS 13.0, *)
-        func webView(_ webView: WKWebView, contextMenuForElement elementInfo: WKContextMenuElementInfo, willCommitWithAnimator animator: UIContextMenuInteractionCommitAnimating) { }
-        
-        @available(iOS 13.0, *)
-        func webView(_ webView: WKWebView, contextMenuDidEndForElement elementInfo: WKContextMenuElementInfo) { }
+    }
+    
+    
+    func webViewDidClose(_ webView: WKWebView) { }
+    
+    
+    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) { }
+    
+    
+    func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) { }
+    
+    
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) { }
+    
+    
+    @available(iOS 13.0, *)
+    private func webView(_ webView: WKWebView, shouldPreviewElement elementInfo: WKContextMenuElementInfo) -> Bool {
+        return true
+    }
+    
+    
+    @available(iOS 13.0, *)
+    private func webView(_ webView: WKWebView, previewingViewControllerForElement elementInfo: WKContextMenuElementInfo, defaultActions previewActions: [WKPreviewActionItem]) -> UIViewController? {
+        return self
+    }
+    
+    
+    func webView(_ webView: WKWebView, commitPreviewingViewController previewingViewController: UIViewController) { }
+    
+    
+    @available(iOS 13.0, *)
+    func webView(_ webView: WKWebView, contextMenuConfigurationForElement elementInfo: WKContextMenuElementInfo, completionHandler: @escaping (UIContextMenuConfiguration?) -> Void) {
+        completionHandler(.none)
+    }
+    
+    
+    @available(iOS 13.0, *)
+    func webView(_ webView: WKWebView, contextMenuWillPresentForElement elementInfo: WKContextMenuElementInfo) { }
+    
+    
+    @available(iOS 13.0, *)
+    func webView(_ webView: WKWebView, contextMenuForElement elementInfo: WKContextMenuElementInfo, willCommitWithAnimator animator: UIContextMenuInteractionCommitAnimating) { }
+    
+    @available(iOS 13.0, *)
+    func webView(_ webView: WKWebView, contextMenuDidEndForElement elementInfo: WKContextMenuElementInfo) { }
 }
